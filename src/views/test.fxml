@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="1017.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TestController">
+   <children>
+      <LineChart fx:id="graph" layoutX="25.0" layoutY="63.0" prefHeight="479.0" prefWidth="663.0">
+        <xAxis>
+          <NumberAxis prefHeight="17.0" prefWidth="391.0" side="BOTTOM" fx:id="xAxis" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis prefHeight="240.0" prefWidth="24.0" side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <Label fx:id="label" layoutX="393.0" layoutY="28.0" prefHeight="22.0" prefWidth="230.0" text="Confronto Algoritmi Ordinamento">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <MenuButton fx:id="menuAlgorithm" alignment="CENTER" layoutX="775.0" layoutY="91.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="138.0" text="Algoritmo">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#bubblesortAction" text="Bubble Sort" />
+          <MenuItem mnemonicParsing="false" onAction="#insertionsortAction" text="Insertion Sort" />
+        </items>
+      </MenuButton>
+      <Button layoutX="808.0" layoutY="290.0" mnemonicParsing="false" onAction="#iniziaTest" text="Avvia Test " />
+      <TextArea fx:id="messaggi" editable="false" layoutX="723.0" layoutY="342.0" prefHeight="191.0" prefWidth="242.0" />
+      <Label layoutX="723.0" layoutY="324.0" text="Messaggi" />
+   </children>
+</AnchorPane>
